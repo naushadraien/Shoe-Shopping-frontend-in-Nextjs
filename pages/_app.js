@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 //all heads and link files are added here
 
@@ -22,7 +24,10 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+      <Header/>
+      {/* the  <Component {...pageProps} /> must be between our header and footer component which is our pages between header and footer*/}
       <Component {...pageProps} />
+      <Footer/>
     </>
   );
 }
